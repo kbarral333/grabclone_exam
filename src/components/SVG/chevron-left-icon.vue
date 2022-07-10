@@ -1,0 +1,26 @@
+<template>
+    <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    :stroke="newStroke ? newStroke : 'currentColor' " 
+                    stroke-width="2"
+                    class="w-5 h-5 float-left"
+                >
+                    <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        d="M15 19l-7-7 7-7" 
+                    />
+                </svg>
+</template>
+
+<script>
+    export default {
+        name: "chevron-left-icon",
+        props:{
+            newStroke: String
+        },
+
+    }
+</script>
