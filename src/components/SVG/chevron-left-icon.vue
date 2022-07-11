@@ -5,7 +5,6 @@
                     viewBox="0 0 24 24" 
                     :stroke="newStroke ? newStroke : 'currentColor' " 
                     stroke-width="2"
-                    class="w-5 h-5 float-left"
                 >
                     <path 
                         stroke-linecap="round" 

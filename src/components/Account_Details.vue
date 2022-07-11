@@ -6,9 +6,9 @@
                 :stroke="'white'"
                 :fill="'#16A34A'"
             />
-            <div class="flex flex-col gap-1">
+            <div class="flex flex-col items-start gap-1">
                 <p class="text-lg font-semibold">{{fullName}}</p>
-                <div class="flex items-center text-gray-500">
+                <div @click="editProfile" class="flex items-center text-gray-500">
                     <p class="text-sm">Edit Profile</p>
                     <chevronLeftIcon class="w-4 h-4 rotate-180" />
                 </div>
@@ -119,6 +119,11 @@
         mounted() {
             this.fullName = localStorage.getItem('accountDetails')
             this.fullName = JSON.parse(this.fullName).name
+        },
+        methods:{
+            editProfile() {
+                this.$router.push('user_details');
+            }
         }
     }
 </script>
