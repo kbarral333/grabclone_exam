@@ -6,9 +6,9 @@
                 :stroke="'white'"
                 :fill="'#16A34A'"
             />
-            <div class="flex flex-col gap-1">
-                <p class="text-lg font-semibold">{{fullName}}</p>
-                <div class="flex items-center text-gray-500">
+            <div class="flex flex-col items-start gap-1">
+                <p class="text-lg font-semibold">{{accountDetails.name}}</p>
+                <div @click="editProfile" class="flex items-center text-gray-500">
                     <p class="text-sm">Edit Profile</p>
                     <chevronLeftIcon class="w-4 h-4 rotate-180" />
                 </div>
@@ -103,6 +103,7 @@
     import avatarIcon from './SVG/avatar-icon.vue'
     import chevronLeftIcon from './SVG/chevron-left-icon.vue'
     import crownIcon from './SVG/crown-icon.vue'
+    import { mapState } from 'vuex'
 
     export default {
         name: 'Account_Details',
@@ -119,6 +120,14 @@
         mounted() {
             this.fullName = localStorage.getItem('accountDetails')
             this.fullName = JSON.parse(this.fullName).name
+        },
+        methods:{
+            editProfile() {
+                this.$router.push('user_details');
+            }
+        },
+        computed: {
+           ...mapState(['accountDetails'])
         }
     }
 </script>

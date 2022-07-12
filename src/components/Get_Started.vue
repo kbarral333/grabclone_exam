@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col h-screen bg-white p-4 gap-6">
         <div class="text-center px-2">
-            <chevronLeftIcon @click="goBack"/>
+            <chevronLeftIcon class="w-5 h-5 float-left" @click="goBack"/>
             <h3 class="font-semibold">Get Started</h3>
         </div>
         <div class="flex flex-col text-sm">
@@ -58,7 +58,8 @@
                 accountDetails: {
                     mobile: '',
                     email: '',
-                    name: ''
+                    name: '',
+                    balance: 0
                 },
                 country: '+63'
             }

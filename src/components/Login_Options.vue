@@ -75,7 +75,12 @@
         },
         methods: {
             goToHomePage(){
-                this.$router.push('home')
+                let user;
+
+                user = localStorage.getItem('accountDetails');
+                user = JSON.parse(user);
+                this.$store.dispatch('logIn', user);
+                this.$router.push('home');
             }
         },
     };

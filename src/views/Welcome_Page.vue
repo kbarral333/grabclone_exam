@@ -50,7 +50,7 @@
             goBack(){
                 this.currentStep--;
             }
-        }
+        },
     };
 
 </script>

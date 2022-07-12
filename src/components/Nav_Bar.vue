@@ -9,14 +9,14 @@
                 />
                 <p class="text-xs" :class="tabs.Home == true ? 'text-green-600' : ''">Home</p>
             </div>
-            <div @click="changeTab('Activity')" class="flex flex-col items-center">
+            <!-- <div @click="changeTab('Activity')" class="flex flex-col items-center">
                 <history-icon
                     class="w-5 h-5"
                     :stroke="tabs.Activity == true ? '#16A34A' :  'currentColor' "
                     :fill="tabs.Activity == true ? 'white' : 'none' "
                 />
                 <p class="text-xs" :class="tabs.Activity == true ? 'text-green-600' : ''">Activity</p>
-            </div>
+            </div> -->
             <div @click="changeTab('Payment')" class="flex flex-col items-center">
                 <wallet-icon
                     class="w-5 h-5"
@@ -25,14 +25,14 @@
                 />
                 <p class="text-xs" :class="tabs.Payment == true ? 'text-green-600' : ''">Payment</p>
             </div>
-            <div @click="changeTab('Messages')" class="flex flex-col items-center">
+            <!-- <div @click="changeTab('Messages')" class="flex flex-col items-center">
                 <chatIcon 
                     class="w-5 h-5"
                     :stroke="tabs.Messages == true ? '#16A34A' :  'currentColor' "
                     :fill="tabs.Messages == true ? 'white' : 'none' "
                 />
                 <p class="text-xs" :class="tabs.Messages == true ? 'text-green-600' : ''">Messages</p>
-            </div>
+            </div> -->
             <div @click="changeTab('Account')" class="flex flex-col items-center">
                 <avatarIcon
                     class="w-5 h-5"
@@ -46,20 +46,20 @@
 </template>
 <script>
 
-    import walletIcon from '@/components/SVG/wallet-icon.vue'
-    import historyIcon from '@/components/SVG/history-icon.vue'
-    import HouseIcon from '@/components/SVG/house-icon.vue'
-    import chatIcon from '@/components/SVG/chat-icon.vue'
-    import avatarIcon from '@/components/SVG/avatar-icon.vue'
-    import { mapState } from 'vuex'
+    import walletIcon from '@/components/SVG/wallet-icon.vue';
+    // import historyIcon from '@/components/SVG/history-icon.vue';
+    import HouseIcon from '@/components/SVG/house-icon.vue';
+    // import chatIcon from '@/components/SVG/chat-icon.vue';
+    import avatarIcon from '@/components/SVG/avatar-icon.vue';
+    import { mapState } from 'vuex';
 
     export default {
         name: 'Nav_Bar',
         components: {
             walletIcon,
-            historyIcon,
+            // historyIcon,
             HouseIcon,
-            chatIcon,
+            // chatIcon,
             avatarIcon
         },
         data() {
