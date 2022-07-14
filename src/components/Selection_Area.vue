@@ -122,7 +122,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-shrink-0 items-start gap-2 p-3">
+                    <div @click="shop( 'Bacon place-That street', '4.9', '1.9 km', '20 mins' )" class="flex flex-shrink-0 items-start gap-2 p-3">
                         <div class="flex flex-col items-start gap-1">
                             <div class="bg-green-200 p-6 rounded-md">
                                 <BaconIcon class="w-20 h-20" />
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-shrink-0 items-start gap-2 p-3">
+                    <div @click="shop( 'Wine place-The Other  street', '4.3', '2.2 km', '1 hr' )" class="flex flex-shrink-0 items-start gap-2 p-3">
                         <div class="flex flex-col items-start gap-1">
                             <div class="bg-green-200 p-6 rounded-md">
                                 <ChampagneIcon class="w-20 h-20" />
@@ -163,7 +163,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-col items-start gap-1">
+                        <div @click="shop( 'Ice Cream place-The Other  street', '5.0', '0.3 km', '5 mins' )" class="flex flex-col items-start gap-1">
                             <div class="bg-green-200 p-6 rounded-md">
                                 <IcecreamIcon class="w-20 h-20" />
                             </div>
