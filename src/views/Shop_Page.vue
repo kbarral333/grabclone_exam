@@ -112,7 +112,7 @@
             <div class="h-1 w-1 bg-white rounded-full"></div>
             <p>{{cart}} Item</p>
         </div>
-            <p>P {{total}}</p>
+            <p>P {{decimalTotal}}</p>
 
         </div>
     </div>
@@ -176,6 +176,11 @@
             this.rating = this.$route.params.rating
             this.time = this.$route.params.time
             this.distance = this.$route.params.distance
+        },
+        computed:{
+            decimalTotal() {
+                return parseInt(this.total).toFixed(2)
+            }
         }
     }
 </script>
